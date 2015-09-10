@@ -317,7 +317,7 @@ config INTEL_QUARK_DTS_THERMAL
 
 config INT340X_THERMAL
 	tristate "ACPI INT340X thermal drivers"
-	depends on X86 && ACPI
+	depends on (X86 && ACPI) || COMPILE_TEST
 	select THERMAL_GOV_USER_SPACE
 	select ACPI_THERMAL_REL
 	select ACPI_FAN
