@@ -242,7 +242,7 @@ config ARMADA_THERMAL
 
 config TEGRA_SOCTHERM
 	tristate "Tegra SOCTHERM thermal management"
-	depends on ARCH_TEGRA
+	depends on ARCH_TEGRA || COMPILE_TEST
 	help
 	  Enable this option for integrated thermal management support on NVIDIA
 	  Tegra124 systems-on-chip. The driver supports four thermal zones
