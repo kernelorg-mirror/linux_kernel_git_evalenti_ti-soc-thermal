@@ -359,7 +359,7 @@ source "drivers/thermal/samsung/Kconfig"
 endmenu
 
 menu "STMicroelectronics thermal drivers"
-depends on ARCH_STI && OF
+depends on (ARCH_STI || COMPILE_TEST) && OF
 source "drivers/thermal/st/Kconfig"
 endmenu
 
